@@ -1,0 +1,37 @@
+Vector:
+for all courses: Cost = 1, # Time Executes = n, Total cost = n  
+      if the course is the same as courseNumber: Cost = 1, # Time Executes = n, Total cost = n 
+      print out the course information: Cost = 1, # Time Executes = 1, Total cost = 1 
+      for each prerequisite of the course: Cost = 1, # Time Executes = n, Total cost = n 
+      print the prerequisite course information: Cost = 1, # Time Executes = n, Total cost = n
+Total Cost: 4n + 1  
+Runtime: O(n)
+
+Advantages: Easy implementation, efficiency sequential access, cache friendly
+Disadvantages: Insertion & deletion can be costly as it requires element shifting, not ideal for large amounts of data
+
+Hash Table:
+for all courses in hast table: Cost = 1, # Time Executes = n, Total cost = n 
+      if the course is the same as courseNumber: Cost = 1, # Time Executes = n, Total cost = n
+print out the course information: Cost = 1, # Time Executes = 1, Total cost = 1
+for each prerequisite of the course: Cost = 1, # Time Executes = n, Total cost = n
+      print the prerequisite course information: Cost = 1, # Time Executes = n, Total cost = n
+Total Cost: 4n + 1 
+Runtime: O(n)
+Advantages: Efficient insertion and deletion, suitable for large number of items
+Disadvantages: Potential for collisions can lower performance
+
+Tree
+Traverse tree in in-order : Cost = log(n), # Time Executes = n, Total cost = n log(n)
+     if the course is the same as courseNumber: Cost = 1, # Time Executes = 1, Total cost = 1
+         print out the course information: Cost = 1, # Time Executes = 1, Total cost = 1
+         for each prerequisite of the course: Cost = 1, # Time Executes = n, Total cost = n
+           print the prerequisite course information: Cost = 1, # Time Executes = n, Total cost = n
+Total Cost: n log(n) + 2
+Runtime: O(n log n)
+Advantages:  Ordered structure, efficient searching, maintains data in sorted order
+Disadvantages: Complex implementation, potential for imbalanced tree, requires additional memory for pointers
+Recommendation
+Based on my analysis, a hash table seems to be the most efficient data structure to be used in the code. It provides constant time insertion and retrieval of objects which makes searching and accessing data efficient. It has a linear run time for reading the file and searching through data. The tree data structure provides efficient searching, however the overhead of maintaining the tree structure is not ideal for this task.  It is ideal for large data sets and while hash collisions may be a concern, but proper hashing techniques and collision handling can address this issue.
+
+
